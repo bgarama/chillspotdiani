@@ -1,116 +1,233 @@
 export default function Home() {
+  const highlights = [
+    {
+      title: "Coastal atmosphere",
+      text: "Soft sea air, sun-washed tones, and a calm setting that makes every visit feel like a reset.",
+    },
+    {
+      title: "Food & drinks",
+      text: "A carefully curated menu of fresh flavors, chilled drinks, and comforting favorites for any hour of the day.",
+    },
+    {
+      title: "Gatherings that feel easy",
+      text: "Whether it is a relaxed meetup or a special celebration, the space is styled for connection and comfort.",
+    },
+    {
+      title: "Sunset moments",
+      text: "The kind of place that turns golden hour into a memory, with views, music, and a warm welcome.",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <section className="bg-gradient-to-r from-blue-900 via-cyan-700 to-teal-500 text-white">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-cyan-100">
-            Welcome to Diani Beach
-          </p>
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
-            Chillspot Diani
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-cyan-50 md:text-xl">
-            Your relaxing coastal destination for great vibes, refreshing drinks,
-            delicious food, and unforgettable beachside moments.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#about"
-              className="rounded-full bg-white px-6 py-3 font-semibold text-cyan-800 shadow-md transition hover:bg-cyan-50"
-            >
-              Learn More
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full border border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-cyan-800"
-            >
-              Contact Us
-            </a>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            name: "Chillspot Diani",
+            description:
+              "A beach-inspired restaurant and lounge experience in Diani offering food, drinks, and relaxed coastal hospitality.",
+            url: "https://chillspotdiani.com",
+            telephone: "+254712345678",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Diani",
+              addressRegion: "Kwale",
+              addressCountry: "KE",
+            },
+            servesCuisine: ["International", "Coastal"],
+            priceRange: "$$",
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "11:00",
+              closes: "23:00",
+            },
+          }),
+        }}
+      />
+      <main className="page-shell">
+      <header className="topbar">
+        <a href="#top" className="brand">
+          <img src="/images/logo/logo.jpeg" alt="Chillspot Diani logo" className="brand-mark" />
+          <span>Chillspot Diani</span>
+        </a>
+        <nav className="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#visit">Visit</a>
+        </nav>
+        <a href="#visit" className="btn btn-primary compact">
+          Visit Us
+        </a>
+      </header>
+
+      <section id="top" className="hero">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Beachside dining & relaxation</p>
+            <h1>Where Diani evenings feel effortless.</h1>
+            <p className="hero-text">
+              From sunrise coffee to sunset cocktails, Chillspot Diani brings
+              together warm hospitality, fresh flavors, and a calm coastal
+              atmosphere.
+            </p>
+
+            <div className="hero-buttons">
+              <a href="#about" className="btn btn-light">
+                Discover More
+              </a>
+              <a href="#visit" className="btn btn-outline">
+                Plan Your Visit
+              </a>
+            </div>
+
+            <ul className="hero-points">
+              <li>Fresh coastal cuisine</li>
+              <li>Relaxed lounge atmosphere</li>
+              <li>Ideal for groups and quiet evenings</li>
+            </ul>
+          </div>
+
+          <div className="hero-panel">
+            <div className="panel-card">
+              <img src="/images/hero/hero.jpeg" alt="Chillspot Diani hero view" className="hero-image" />
+              <p className="panel-label">Tonight at Chillspot</p>
+              <h2>
+                Ocean breeze, good company, and something refreshing on every
+                table.
+              </h2>
+              <div className="panel-stats">
+                <div>
+                  <strong>Open daily</strong>
+                  <span>From 11:00</span>
+                </div>
+                <div>
+                  <strong>Reservations</strong>
+                  <span>Welcome</span>
+                </div>
+                <div>
+                  <strong>Vibe</strong>
+                  <span>Relaxed & social</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
+      <section id="about" className="section about">
+        <div className="container about-grid">
           <div>
-            <h2 className="text-3xl font-bold md:text-4xl">About Chillspot Diani</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-700">
-              Chillspot Diani is a beach-inspired lifestyle destination designed
-              for comfort, connection, and memorable experiences. Whether you are
-              dropping by for a casual meal, sunset drinks, or a full day of
-              relaxation, we offer a welcoming space with a laid-back coastal feel.
+            <p className="eyebrow section-eyebrow">About us</p>
+            <h2>Designed for lingering, laughing, and unwinding.</h2>
+            <p>
+              Chillspot Diani is a beach-inspired destination where comfort,
+              connection, and polished hospitality come together in one easy,
+              welcoming setting.
             </p>
-            <p className="mt-4 text-lg leading-8 text-gray-700">
-              We combine warm hospitality, a beautiful atmosphere, and a menu
-              crafted to suit both locals and visitors looking for the best of
-              Diani.
+            <p>
+              We bring together the energy of a lively coastal venue with the
+              ease of a place where guests can settle in, stay awhile, and enjoy
+              the moment.
             </p>
           </div>
 
-          <div className="rounded-3xl bg-gray-100 p-8 shadow-sm">
-            <h3 className="text-2xl font-semibold">Why visitors love us</h3>
-            <ul className="mt-6 space-y-4 text-lg text-gray-700">
-              <li>• Relaxed and stylish beach atmosphere</li>
-              <li>• Great food, drinks, and social spaces</li>
-              <li>• Ideal for friends, families, and travelers</li>
-              <li>• Perfect for sunset moments and weekend hangouts</li>
+          <div className="info-card">
+            <img src="/images/activities/activities-1.jpeg" alt="Chillspot Diani activities" className="about-image" />
+            <h3>What guests can expect</h3>
+            <ul>
+              <li>Warm service and a relaxed atmosphere</li>
+              <li>Great food, drinks, and shared experiences</li>
+              <li>Ideal for couples, friends, and small groups</li>
+              <li>A setting that feels both polished and easygoing</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-bold md:text-4xl">What to Expect</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Food & Drinks</h3>
-              <p className="mt-3 text-gray-700">
-                Enjoy a selection of tasty meals, refreshing cocktails, and
-                satisfying beverages in a relaxed setting.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Relaxed Ambience</h3>
-              <p className="mt-3 text-gray-700">
-                Experience a calm, inviting environment inspired by the beauty
-                and rhythm of the coast.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Memorable Moments</h3>
-              <p className="mt-3 text-gray-700">
-                From casual meetups to special celebrations, Chillspot Diani is
-                made for meaningful experiences.
-              </p>
-            </div>
+      <section id="highlights" className="section section-alt">
+        <div className="container">
+          <div className="section-heading">
+            <p className="eyebrow">Why guests return</p>
+            <h2>Every detail is shaped for a relaxed coastal experience.</h2>
+          </div>
+
+          <div className="cards-grid">
+            {highlights.map((item) => (
+              <article key={item.title} className="feature-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="image-strip">
+            <img src="/images/food/food.jpeg" alt="Signature food served at Chillspot Diani" className="strip-image" />
+            <img src="/images/drink/drink-1.jpeg" alt="Refreshing drink at Chillspot Diani" className="strip-image" />
+            <img src="/images/music/music.jpeg" alt="Live music atmosphere at Chillspot Diani" className="strip-image" />
           </div>
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="rounded-3xl bg-cyan-900 px-8 py-12 text-white">
-          <h2 className="text-3xl font-bold md:text-4xl">Visit or Contact Us</h2>
-          <p className="mt-4 max-w-2xl text-lg text-cyan-100">
-            Planning to stop by? We would love to welcome you. Reach out for
-            reservations, inquiries, or event details.
-          </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div>
-              <h3 className="font-semibold">Location</h3>
-              <p className="mt-2 text-cyan-100">Diani Beach, Kenya</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Phone</h3>
-              <p className="mt-2 text-cyan-100">+254 XXX XXX XXX</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Email</h3>
-              <p className="mt-2 text-cyan-100">info@chillspotdiani.com</p>
-            </div>
+      <section id="visit" className="section contact-preview">
+        <div className="container callout">
+          <div>
+            <p className="eyebrow">Visit us</p>
+            <h2>Come by for a meal, a drink, or a quiet moment by the coast.</h2>
+            <img src="/images/gallery/gallery-1.jpeg" alt="Chillspot Diani venue atmosphere" className="visit-image" />
+            <p>
+              Reservations are welcome and walk-ins are always appreciated. For
+              inquiries, reach us at the details below and we will be happy to
+              help.
+            </p>
+          </div>
+
+          <div className="contact-card">
+            <p className="contact-label">Contact</p>
+            <a href="tel:+254712345678">+254 712 345 678</a>
+            <a href="mailto:hello@chillspotdiani.com">hello@chillspotdiani.com</a>
+            <a href="mailto:hello@chillspotdiani.com" className="btn btn-primary">
+              Reserve Your Table
+            </a>
           </div>
         </div>
       </section>
-    </main>
+
+      <footer className="footer">
+        <div className="container footer-row">
+          <div>
+            <a href="#top" className="brand footer-brand">
+              Chillspot Diani
+            </a>
+            <p>Coastal comfort, fresh flavor, and laid-back energy.</p>
+          </div>
+          <div className="footer-credit">
+            <p>
+              Designed and deployed by{' '}
+              <a
+                href="https://bahamadzogadze.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Baha Digital Innovation Hub
+              </a>
+            </p>
+            <p>© 2026 Chillspot Diani. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      </main>
+    </>
   );
 }
