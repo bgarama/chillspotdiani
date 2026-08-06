@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 const siteUrl = "https://chillspotdiani.com";
 
 export const metadata: Metadata = {
