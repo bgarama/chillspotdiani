@@ -197,6 +197,24 @@ export default function Home() {
             <p className="contact-label">Contact</p>
             <a href="tel:+254757857700">+254 757 857 700</a>
             <a href="mailto:chillspotdiani002@gmail.com">chillspotdiani002@gmail.com</a>
+            <div className="social-links">
+  <a
+    href="https://www.instagram.com/chillspotdiani.ke?igsh=MW9wcTQ3enp6emxkNA=="
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-light compact"
+  >
+    Instagram
+  </a>
+  <a
+    href="https://www.tiktok.com/@chillspot_diani?_r=1&_t=ZS-98dR1BuqKto"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-light compact"
+  >
+    TikTok
+  </a>
+</div>
             <a href="mailto:chillspotdiani002@gmail.com" className="btn btn-primary">
               Reserve Your Table
             </a>
