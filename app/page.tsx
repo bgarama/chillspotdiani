@@ -144,7 +144,7 @@ export default function Home() {
           </div>
 
           <div className="info-card">
-            <img src="public/images/activities-1.jpeg" alt="Chillspot Diani activities" className="about-image" />
+            <img src="/images/activities-1.jpeg" alt="Chillspot Diani activities" className="about-image" />
             <h3>What guests can expect</h3>
             <ul>
               <li>Warm service and a relaxed atmosphere</li>
@@ -173,9 +173,9 @@ export default function Home() {
           </div>
 
           <div className="image-strip">
-            <img src="public/images/food.jpeg" alt="Signature food served at Chillspot Diani" className="strip-image" />
-            <img src="public/images/drink-1.jpeg" alt="Refreshing drink at Chillspot Diani" className="strip-image" />
-            <img src="public/images/music.jpeg" alt="Live music atmosphere at Chillspot Diani" className="strip-image" />
+            <img src="/images/food.jpeg" alt="Signature food served at Chillspot Diani" className="strip-image" />
+            <img src="/images/drinks.jpeg" alt="Refreshing drink at Chillspot Diani" className="strip-image" />
+            <img src="/images/music.jpeg" alt="Live music atmosphere at Chillspot Diani" className="strip-image" />
           </div>
         </div>
       </section>
