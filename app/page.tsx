@@ -81,87 +81,59 @@ export default function Home() {
       <main className="bg-[#fcfaf6] text-[#163042]">
         <section
           id="top"
-          className="relative h-[85vh] min-h-[720px] overflow-hidden bg-[#08131b] pt-24 text-white sm:min-h-[760px] sm:pt-28 lg:h-screen"
+          className="relative overflow-hidden bg-[#08131b] text-white"
         >
           <div className="absolute inset-0">
             <Image
               src="/images/hero.jpeg"
               alt="Chillspot Diani hero view"
-              fill
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover opacity-20"
+              width={1600}
+              height={1200}
+              className="absolute inset-0 h-full w-full object-cover object-center opacity-34"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#08131b]/60 via-[#08131b]/72 to-[#08131b]/88" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(32,184,240,0.14),transparent_32%),linear-gradient(to_bottom,rgba(8,19,27,0.42),rgba(8,19,27,0.72),rgba(8,19,27,0.92))]" />
           </div>
 
-          <div className="relative mx-auto grid max-w-6xl gap-8 px-4 pb-14 sm:px-6 sm:pb-16 lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-8 lg:pb-20">
+          <div className="relative mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:px-8">
             <div className="max-w-2xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#7ed8f7] sm:text-sm">
+              <p className="mb-4 inline-flex rounded-full border border-white/12 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#8fe6ff] sm:text-xs">
                 Beachside dining & relaxation
               </p>
 
-              <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-6xl">
+              <h1 className="max-w-[10ch] text-4xl font-semibold leading-[0.98] text-white sm:text-5xl lg:text-6xl">
                 Where Diani evenings feel effortless.
               </h1>
 
-              <p className="mt-5 max-w-xl text-base leading-7 text-white/90 sm:text-lg sm:leading-8">
+              <p className="mt-5 max-w-xl text-[15px] leading-7 text-white/82 sm:text-lg sm:leading-8">
                 From sunrise coffee to sunset cocktails, Chillspot Diani brings
                 together warm hospitality, fresh flavors, and a calm coastal atmosphere.
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#about"
-                  className="inline-flex min-w-[170px] items-center justify-center rounded-full bg-[#1daee5] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1297ca]"
+                  className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#20b8f0] px-6 py-3 text-base font-semibold text-[#062033] transition hover:bg-[#53cdf6]"
                 >
                   Discover More
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex min-w-[170px] items-center justify-center rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#08131b]"
+                  className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-white/18 bg-white/6 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10"
                 >
                   Plan Your Visit
                 </a>
               </div>
 
-              <ul className="mt-7 grid gap-2 text-sm text-white/85 sm:grid-cols-3 sm:gap-3">
-                <li>Fresh coastal cuisine</li>
-                <li>Relaxed lounge atmosphere</li>
-                <li>Ideal for groups and quiet evenings</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-3 backdrop-blur-sm">
-              <div className="overflow-hidden rounded-[1.25rem] bg-[#fffdf9] text-[#163042] shadow-2xl">
-                <Image
-                  src="/images/activities-1.jpeg"
-                  alt="Chillspot Diani experience"
-                  width={900}
-                  height={700}
-                  className="h-[200px] w-full object-cover sm:h-[240px] lg:h-[300px]"
-                />
-                <div className="space-y-4 p-5 sm:p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#1daee5] sm:text-sm">
-                    Tonight at Chillspot
-                  </p>
-                  <h2 className="text-xl font-bold leading-snug sm:text-2xl">
-                    Ocean breeze, good company, and something refreshing on every table.
-                  </h2>
-                  <div className="grid gap-4 text-sm text-[#4c6472] sm:grid-cols-3">
-                    <div>
-                      <strong className="block text-[#163042]">Open daily</strong>
-                      <span>From 10:00</span>
-                    </div>
-                    <div>
-                      <strong className="block text-[#163042]">Reservations</strong>
-                      <span>Always welcome</span>
-                    </div>
-                    <div>
-                      <strong className="block text-[#163042]">Vibe</strong>
-                      <span>Warm, lively & unforgettable</span>
-                    </div>
-                  </div>
+              <div className="mt-8 grid gap-3 text-sm text-white/78 sm:grid-cols-3 sm:text-[15px]">
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                  Fresh coastal cuisine
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                  Relaxed lounge atmosphere
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                  Ideal for groups & quiet evenings
                 </div>
               </div>
             </div>
