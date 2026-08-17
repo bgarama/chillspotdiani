@@ -19,32 +19,36 @@ export default function Navbar() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-30">
-      <div className="mx-auto max-w-7xl px-6 py-5 lg:px-10">
-        <div className="flex items-center justify-between gap-4">
+      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-10">
+        <div className="flex items-center justify-between gap-3">
           <Link
             href="/"
-            className="rounded-xl bg-white/85 px-3 py-2 backdrop-blur-sm"
+            className="rounded-xl bg-white/90 px-2 py-2 backdrop-blur-sm shadow-sm"
             onClick={closeMenu}
           >
             <Image
               src="/images/logo.jpeg"
               alt="Chillspot Diani logo"
-              width={140}
-              height={70}
-              className="h-14 w-auto rounded-sm object-contain"
+              width={120}
+              height={56}
+              className="h-10 w-auto sm:h-12 md:h-14 rounded-sm object-contain"
               priority
             />
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-white md:flex">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="transition hover:text-[#19aee6]">
+              <a
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-[#19aee6]"
+              >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <a
               href="#contact"
               className="hidden rounded-full bg-[#19aee6] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#0f8fc2] md:inline-flex"
@@ -57,11 +61,11 @@ export default function Navbar() {
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
-              className="inline-flex items-center justify-center rounded-xl bg-white/85 p-3 text-[#1f1f1f] backdrop-blur-sm transition hover:bg-white md:hidden"
+              className="inline-flex items-center justify-center rounded-xl bg-white/90 p-2.5 text-[#1f1f1f] backdrop-blur-sm shadow-sm transition hover:bg-white md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -86,7 +90,7 @@ export default function Navbar() {
         </div>
 
         {menuOpen && (
-          <div className="mt-4 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur-md md:hidden">
+          <div className="mt-3 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur-md md:hidden">
             <nav className="flex flex-col gap-2 text-sm font-medium text-[#1f1f1f]">
               {navLinks.map((link) => (
                 <a
