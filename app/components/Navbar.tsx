@@ -18,30 +18,30 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-30">
-      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between gap-3">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b1620]/88 backdrop-blur-md">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between gap-3">
           <Link
             href="/"
-            className="rounded-xl bg-white/90 px-2 py-2 backdrop-blur-sm shadow-sm"
+            className="flex items-center rounded-xl bg-white px-2 py-2 shadow-sm"
             onClick={closeMenu}
           >
             <Image
               src="/images/logo.jpeg"
               alt="Chillspot Diani logo"
-              width={120}
-              height={56}
-              className="h-10 w-auto sm:h-12 md:h-14 rounded-sm object-contain"
+              width={110}
+              height={52}
+              className="h-9 w-auto object-contain sm:h-10"
               priority
             />
           </Link>
 
-          <nav className="hidden items-center gap-8 text-sm font-medium text-white md:flex">
+          <nav className="hidden items-center gap-7 text-sm font-medium text-white md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="transition hover:text-[#19aee6]"
+                className="transition hover:text-[#34bdf2]"
               >
                 {link.label}
               </a>
@@ -51,21 +51,21 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <a
               href="#contact"
-              className="hidden rounded-full bg-[#19aee6] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#0f8fc2] md:inline-flex"
+              className="hidden rounded-full bg-[#1daee5] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1297ca] md:inline-flex"
             >
               Visit Us
             </a>
 
             <button
               type="button"
-              aria-label="Toggle menu"
+              aria-label="Toggle navigation menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
-              className="inline-flex items-center justify-center rounded-xl bg-white/90 p-2.5 text-[#1f1f1f] backdrop-blur-sm shadow-sm transition hover:bg-white md:hidden"
+              className="inline-flex items-center justify-center rounded-xl bg-white p-2.5 text-[#0b1620] shadow-sm transition hover:bg-[#f3f7fa] md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -81,7 +81,7 @@ export default function Navbar() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
+                    d="M4 7h16M4 12h16M4 17h16"
                   />
                 )}
               </svg>
@@ -90,27 +90,28 @@ export default function Navbar() {
         </div>
 
         {menuOpen && (
-          <div className="mt-3 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur-md md:hidden">
-            <nav className="flex flex-col gap-2 text-sm font-medium text-[#1f1f1f]">
-              {navLinks.map((link) => (
+          <div className="pb-4 md:hidden">
+            <div className="rounded-2xl border border-white/10 bg-white p-3 shadow-xl">
+              <nav className="flex flex-col gap-1 text-sm font-medium text-[#163042]">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="rounded-xl px-4 py-3 transition hover:bg-[#eef8fc] hover:text-[#1daee5]"
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 <a
-                  key={link.href}
-                  href={link.href}
+                  href="#contact"
                   onClick={closeMenu}
-                  className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
+                  className="mt-2 inline-flex items-center justify-center rounded-full bg-[#1daee5] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1297ca]"
                 >
-                  {link.label}
+                  Reserve Your Table
                 </a>
-              ))}
-
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="mt-2 inline-flex items-center justify-center rounded-full bg-[#19aee6] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0f8fc2]"
-              >
-                Visit Us
-              </a>
-            </nav>
+              </nav>
+            </div>
           </div>
         )}
       </div>
