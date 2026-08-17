@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 const siteUrl = "https://chillspotdiani.com";
 
 export const metadata: Metadata = {
@@ -40,12 +43,21 @@ export const metadata: Metadata = {
     siteName: "Chillspot Diani",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/hero.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Chillspot Diani beachfront view",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chillspot Diani | Beach Restaurant & Lounge",
     description:
       "A relaxed beachside destination for food, drinks, and memorable coastal moments in Diani.",
+    images: ["/images/hero.jpeg"],
   },
   icons: {
     icon: [
@@ -62,7 +74,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-white text-[#1f1f1f] antialiased">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -4,6 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#highlights", label: "Experience" },
+  { href: "#activities", label: "Activities" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,7 +20,7 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="mx-auto max-w-7xl px-6 py-5 lg:px-10">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
             className="rounded-xl bg-white/85 px-3 py-2 backdrop-blur-sm"
@@ -24,25 +32,16 @@ export default function Navbar() {
               width={140}
               height={70}
               className="h-14 w-auto rounded-sm object-contain"
+              priority
             />
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-white md:flex">
-            <a href="#about" className="transition hover:text-[#19aee6]">
-              About
-            </a>
-            <a href="#highlights" className="transition hover:text-[#19aee6]">
-              Experience
-            </a>
-            <a href="#activities" className="transition hover:text-[#19aee6]">
-              Activities
-            </a>
-            <a href="#gallery" className="transition hover:text-[#19aee6]">
-              Gallery
-            </a>
-            <a href="#contact" className="transition hover:text-[#19aee6]">
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="transition hover:text-[#19aee6]">
+                {link.label}
+              </a>
+            ))}
           </nav>
 
           <div className="flex items-center gap-3">
@@ -89,41 +88,16 @@ export default function Navbar() {
         {menuOpen && (
           <div className="mt-4 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur-md md:hidden">
             <nav className="flex flex-col gap-2 text-sm font-medium text-[#1f1f1f]">
-              <a
-                href="#about"
-                onClick={closeMenu}
-                className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
-              >
-                About
-              </a>
-              <a
-                href="#highlights"
-                onClick={closeMenu}
-                className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
-              >
-                Experience
-              </a>
-              <a
-                href="#activities"
-                onClick={closeMenu}
-                className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
-              >
-                Activities
-              </a>
-              <a
-                href="#gallery"
-                onClick={closeMenu}
-                className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
-              >
-                Gallery
-              </a>
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
-              >
-                Contact
-              </a>
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="rounded-xl px-4 py-3 transition hover:bg-[#eaf8fd] hover:text-[#19aee6]"
+                >
+                  {link.label}
+                </a>
+              ))}
 
               <a
                 href="#contact"

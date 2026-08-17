@@ -6,7 +6,10 @@ export default function Footer() {
     <footer className="bg-[#111111] text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-3 lg:px-10">
         <div>
-          <Link href="/" className="inline-flex items-center rounded-xl bg-white/90 px-3 py-2">
+          <Link
+            href="/"
+            className="inline-flex items-center rounded-xl bg-white/90 px-3 py-2"
+          >
             <Image
               src="/images/logo.jpeg"
               alt="Chillspot Diani logo"
@@ -24,21 +27,11 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-[#19aee6]">Quick Links</h3>
           <div className="mt-4 flex flex-col gap-3 text-sm text-white/80">
-            <a href="#about" className="hover:text-[#19aee6]">
-              About
-            </a>
-            <a href="#highlights" className="hover:text-[#19aee6]">
-              Experience
-            </a>
-            <a href="#activities" className="hover:text-[#19aee6]">
-              Activities
-            </a>
-            <a href="#gallery" className="hover:text-[#19aee6]">
-              Gallery
-            </a>
-            <a href="#contact" className="hover:text-[#19aee6]">
-              Contact
-            </a>
+            <a href="#about" className="hover:text-[#19aee6]">About</a>
+            <a href="#highlights" className="hover:text-[#19aee6]">Experience</a>
+            <a href="#activities" className="hover:text-[#19aee6]">Activities</a>
+            <a href="#gallery" className="hover:text-[#19aee6]">Gallery</a>
+            <a href="#contact" className="hover:text-[#19aee6]">Contact</a>
           </div>
         </div>
 
@@ -47,7 +40,16 @@ export default function Footer() {
           <div className="mt-4 space-y-3 text-sm text-white/80">
             <p>Diani Beach, Kenya</p>
             <p>Food, drinks, music, and beach vibes</p>
-            <p>Open for unforgettable moments by the coast</p>
+            <p>Open daily from 10:00</p>
+            <a href="tel:+254757857700" className="block hover:text-[#19aee6]">
+              +254 757 857 700
+            </a>
+            <a
+              href="mailto:chillspotdiani002@gmail.com"
+              className="block hover:text-[#19aee6]"
+            >
+              chillspotdiani002@gmail.com
+            </a>
           </div>
         </div>
       </div>
