@@ -95,7 +95,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(32,184,240,0.14),transparent_32%),linear-gradient(to_bottom,rgba(8,19,27,0.42),rgba(8,19,27,0.72),rgba(8,19,27,0.92))]" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:px-8">
+          <div className="relative mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 pb-12 pt-32 sm:px-6 sm:pb-16 sm:pt-32 lg:px-8">
             <div className="max-w-2xl">
               <p className="mb-4 inline-flex rounded-full border border-white/12 bg-white/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#8fe6ff] sm:text-xs">
                 Beachside dining & relaxation
