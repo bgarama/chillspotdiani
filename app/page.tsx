@@ -81,7 +81,7 @@ export default function Home() {
       <main className="bg-[#fcfaf6] text-[#163042]">
         <section
           id="top"
-          className="relative overflow-hidden bg-[#08131b] pt-24 text-white sm:pt-28"
+          className="relative min-h-[720px] overflow-hidden bg-[#08131b] pt-24 text-white sm:min-h-[760px] sm:pt-28 lg:min-h-screen"
         >
           <div className="absolute inset-0">
             <Image
@@ -89,7 +89,8 @@ export default function Home() {
               alt="Chillspot Diani hero view"
               fill
               priority
-              className="object-cover opacity-30"
+              sizes="100vw"
+              className="object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#08131b]/75 via-[#08131b]/82 to-[#08131b]" />
           </div>
