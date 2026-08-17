@@ -18,20 +18,20 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b1620]/88 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#07141d]/92 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between gap-3">
+        <div className="flex h-18 sm:h-20 items-center justify-between gap-3">
           <Link
             href="/"
-            className="flex items-center rounded-xl bg-white px-2 py-2 shadow-sm"
+            className="flex items-center rounded-xl bg-white px-2 py-1.5 shadow-sm"
             onClick={closeMenu}
           >
             <Image
               src="/images/logo.jpeg"
               alt="Chillspot Diani logo"
-              width={110}
-              height={52}
-              className="h-9 w-auto object-contain sm:h-10"
+              width={96}
+              height={44}
+              className="h-8 w-auto object-contain sm:h-10"
               priority
             />
           </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
