@@ -92,7 +92,7 @@ export default function Home() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover opacity-20"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#08131b]/75 via-[#08131b]/82 to-[#08131b]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#08131b]/60 via-[#08131b]/72 to-[#08131b]/88" />
           </div>
 
           <div className="relative mx-auto grid max-w-6xl gap-8 px-4 pb-14 sm:px-6 sm:pb-16 lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-8 lg:pb-20">
